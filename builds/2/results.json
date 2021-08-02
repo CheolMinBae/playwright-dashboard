@@ -1,0 +1,563 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "maxFailures": 0,
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/mnt/jenkins/workspace/playwright/test_runner/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "name": "chromium",
+        "testDir": "/mnt/jenkins/workspace/playwright/test_runner/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)+(spec|test).[jt]s"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "reporter": [
+      [
+        "dot"
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "rootDir": "/mnt/jenkins/workspace/playwright/test_runner/tests",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "workers": 4
+  },
+  "suites": [
+    {
+      "title": "",
+      "file": "Benachrichtigungen.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 15709,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "Benachrichtigungen.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "berechtigungenErstellenAutor.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": false,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 13039,
+                  "error": {
+                    "message": "Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenErstellenAutor-test-chromium/erstellenAlsAutor-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenErstellenAutor-test-chromium/erstellenAlsAutor-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenErstellenAutor-test-chromium/erstellenAlsAutor-diff.png",
+                    "stack": "Error: Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenErstellenAutor-test-chromium/erstellenAlsAutor-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenErstellenAutor-test-chromium/erstellenAlsAutor-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenErstellenAutor-test-chromium/erstellenAlsAutor-diff.png\n    at /mnt/jenkins/workspace/playwright/test_runner/tests/berechtigungenErstellenAutor.spec.js:20:35\n    at WorkerRunner._runTestWithBeforeHooks (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/test/workerRunner.js:290:13)"
+                  },
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "berechtigungenErstellenAutor.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "berechtigungenSiteEinstellungen.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 21535,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "berechtigungenSiteEinstellungen.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "berechtigungenVerwaltung.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": false,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "failed",
+                  "duration": 26419,
+                  "error": {
+                    "message": "Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenVerwaltung-test-chromium/verwaltungAlsHerausgeber-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenVerwaltung-test-chromium/verwaltungAlsHerausgeber-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenVerwaltung-test-chromium/verwaltungAlsHerausgeber-diff.png",
+                    "stack": "Error: Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenVerwaltung-test-chromium/verwaltungAlsHerausgeber-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenVerwaltung-test-chromium/verwaltungAlsHerausgeber-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/berechtigungenVerwaltung-test-chromium/verwaltungAlsHerausgeber-diff.png\n    at /mnt/jenkins/workspace/playwright/test_runner/tests/berechtigungenVerwaltung.spec.js:55:35\n    at WorkerRunner._runTestWithBeforeHooks (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/test/workerRunner.js:290:13)"
+                  },
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "berechtigungenVerwaltung.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "FilterAnwenden.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 19856,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "FilterAnwenden.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "klickAufDots.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 18585,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "klickAufDots.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "KontoAufrufen.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": false,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "failed",
+                  "duration": 16742,
+                  "error": {
+                    "message": "Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/KontoAufrufen-test-chromium/basisAngaben-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/KontoAufrufen-test-chromium/basisAngaben-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/KontoAufrufen-test-chromium/basisAngaben-diff.png",
+                    "stack": "Error: Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/KontoAufrufen-test-chromium/basisAngaben-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/KontoAufrufen-test-chromium/basisAngaben-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/KontoAufrufen-test-chromium/basisAngaben-diff.png\n    at /mnt/jenkins/workspace/playwright/test_runner/tests/KontoAufrufen.spec.js:24:35\n    at WorkerRunner._runTestWithBeforeHooks (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/test/workerRunner.js:290:13)"
+                  },
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "KontoAufrufen.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "kursAusfuehren.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": false,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "timedOut",
+                  "duration": 240367,
+                  "error": {
+                    "message": "Pending operations:\n  - page.click at kursAusfuehren.spec.js:17:14\n\npage.click: Protocol error (Runtime.callFunctionOn): Target closed.\n=========================== logs ===========================\nwaiting for selector \"text=Lernen 2\"\n============================================================\nNote: use DEBUG=pw:api environment variable to capture Playwright logs.",
+                    "stack": "Pending operations:\n  - page.click at kursAusfuehren.spec.js:17:14\n\npage.click: Protocol error (Runtime.callFunctionOn): Target closed.\n=========================== logs ===========================\nwaiting for selector \"text=Lernen 2\"\n============================================================\nNote: use DEBUG=pw:api environment variable to capture Playwright logs.\nError\n    at Object.captureStackTrace (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/utils/stackTrace.js:51:19)\n    at Connection.sendMessageToServer (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/client/connection.js:73:48)\n    at Proxy.<anonymous> (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/client/channelOwner.js:64:61)\n    at /mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/client/frame.js:270:34\n    at Frame._wrapApiCall (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/client/channelOwner.js:77:34)\n    at Frame.click (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/client/frame.js:269:21)\n    at /mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/client/page.js:422:60\n    at Page._attributeToPage (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/client/page.js:202:20)\n    at Page.click (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/client/page.js:422:21)\n    at /mnt/jenkins/workspace/playwright/test_runner/tests/kursAusfuehren.spec.js:17:14\n    at WorkerRunner._runTestWithBeforeHooks (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/test/workerRunner.js:290:13)"
+                  },
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "kursAusfuehren.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "login.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 8337,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "login.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "medienbibliothek.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 13795,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "medienbibliothek.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "SitesOeffnen.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": false,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "status": "failed",
+                  "duration": 11927,
+                  "error": {
+                    "message": "Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/SitesOeffnen-test-chromium/siteuebersicht-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/SitesOeffnen-test-chromium/siteuebersicht-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/SitesOeffnen-test-chromium/siteuebersicht-diff.png",
+                    "stack": "Error: Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/SitesOeffnen-test-chromium/siteuebersicht-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/SitesOeffnen-test-chromium/siteuebersicht-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/SitesOeffnen-test-chromium/siteuebersicht-diff.png\n    at /mnt/jenkins/workspace/playwright/test_runner/tests/SitesOeffnen.spec.js:21:35\n    at runNextTicks (internal/process/task_queues.js:60:5)\n    at processImmediate (internal/timers.js:437:9)\n    at WorkerRunner._runTestWithBeforeHooks (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/test/workerRunner.js:290:13)"
+                  },
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "SitesOeffnen.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "SortierenNach.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 24492,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "SortierenNach.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "spracheAendern.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 22986,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "spracheAendern.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "tutorialStarten.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": false,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "status": "failed",
+                  "duration": 21791,
+                  "error": {
+                    "message": "Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/tutorialStarten-test-chromium/tutorial-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/tutorialStarten-test-chromium/tutorial-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/tutorialStarten-test-chromium/tutorial-diff.png",
+                    "stack": "Error: Snapshot comparison failed:\n\nExpected: /mnt/jenkins/workspace/playwright/test_runner/test-results/tutorialStarten-test-chromium/tutorial-expected.png\nReceived: /mnt/jenkins/workspace/playwright/test_runner/test-results/tutorialStarten-test-chromium/tutorial-actual.png\n    Diff: /mnt/jenkins/workspace/playwright/test_runner/test-results/tutorialStarten-test-chromium/tutorial-diff.png\n    at /mnt/jenkins/workspace/playwright/test_runner/tests/tutorialStarten.spec.js:45:35\n    at runNextTicks (internal/process/task_queues.js:60:5)\n    at processImmediate (internal/timers.js:437:9)\n    at WorkerRunner._runTestWithBeforeHooks (/mnt/jenkins/workspace/playwright/test_runner/node_modules/@playwright/test/lib/test/workerRunner.js:290:13)"
+                  },
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "tutorialStarten.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "",
+      "file": "unternehmensrolle.spec.js",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 15126,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0
+                }
+              ]
+            }
+          ],
+          "file": "unternehmensrolle.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
