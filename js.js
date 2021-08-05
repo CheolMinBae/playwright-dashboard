@@ -16,6 +16,42 @@ function Get(yourUrl) {
   return Httpreq.responseText;
 }
 
+function search() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function getNumberOfBuilds() {
+  let number = 0;
+  $.ajax({
+    url: "builds/",
+    success: function (data) {
+      $(data).find("a").each(function () {
+        number++;
+      })
+    },
+    async: false
+  });
+  return number - 1;
+}
+
 let buildNumber = GetURLParameter('build');
 
 let sbuild = document.getElementById('sbuild');
@@ -28,12 +64,12 @@ let tbody = document.createElement("tbody");
 
 //create Table Header
 let hRow = document.createElement("tr");
-let hFileName = document.createElement("td");
-let hStatus = document.createElement("td");
-let hBrowser = document.createElement("td");
-let hDuration = document.createElement("td");
-let hWorkerIndex = document.createElement("td");
-let hError = document.createElement("td");
+let hFileName = document.createElement("th");
+let hStatus = document.createElement("th");
+let hBrowser = document.createElement("th");
+let hDuration = document.createElement("th");
+let hWorkerIndex = document.createElement("th");
+let hError = document.createElement("th");
 
 hFileName.append(document.createTextNode("Name"));
 hStatus.append(document.createTextNode("Status"));
@@ -50,7 +86,7 @@ hRow.append(hWorkerIndex);
 hRow.append(hError);
 
 hRow.style.fontWeight = "bold";
-tbody.appendChild(hRow);
+table.appendChild(hRow);
 
 
 function addTableData(tr, data) {
@@ -105,25 +141,15 @@ for (let i of Object.keys(data.suites)) {
 }
 table.appendChild(tbody);
 
+let dropdown = document.getElementById('dropdown');
 
-function search() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("search");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("table");
-  tr = table.getElementsByTagName("tr");
+let numberOfBuilds = getNumberOfBuilds();
 
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
+for (let i = 1; i <= numberOfBuilds; i++) {
+  let li = document.createElement('li');
+  let a = document.createElement('a');
+  a.href = "?build=" + i;
+  a.innerHTML = i;
+  li.append(a);
+  dropdown.appendChild(li);
 }
