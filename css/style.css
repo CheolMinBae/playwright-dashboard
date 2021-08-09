@@ -54,7 +54,7 @@ tbody tr:nth-child(even) {
 }
 
 #search {
-  background-image: url("css/searchicon.png");
+  background-image: url("searchicon.png");
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 80%;
