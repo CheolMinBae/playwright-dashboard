@@ -134,6 +134,9 @@ for (let i of Object.keys(data.suites)) {
       } else {
         addTableData(row, data.suites[i].specs[0].tests[0].results[0].error.message);
       }
+    case "passed":
+      row.style.backgroundColor = "green";
+      addTableData(row, "");
       break;
     default:
       addTableData(row, "");
